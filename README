@@ -1,0 +1,2 @@
+g++ tis.cpp -o tis
+./tis < in.txt > out.txt
