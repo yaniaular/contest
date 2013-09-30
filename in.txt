@@ -1,0 +1,6 @@
+f:@AB
+x:&CC
+x:&&BAC
+g:@&&ACB&XY
+z:@I@ID
+*

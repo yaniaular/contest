@@ -1,0 +1,5 @@
+f: A -> B
+x: (C, C)
+x: (B, A, C)
+g: (A, C, B) -> (X, Y)
+z: I -> I -> D
