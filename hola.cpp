@@ -20,10 +20,6 @@ int main(){
    cout << ejem << endl;
 
     for(i = ejem.size()-1; i > -1; i--){
-        
-       // cout << "****" << ejem.at(i) << endl;
-
-
         if( isalpha( ejem.at(i) )  ){ //Si es letra, encolo
             c = ejem.at(i);
            stringstream ss;
@@ -31,22 +27,19 @@ int main(){
             ss << c;
             ss >> s;
             cola.push( s );
-                cout << s << endl;       
         }
         else{
             if( ejem.at(i) == '&' ){
                a = cola.top();
                cola.pop();
-                cout << '&' << endl;       
                b = cola.top();
                cola.pop();
                
                if( a.at(0) == '(' ){
                    a = a.substr(1, a.size()-2 );
                }
-                    u = "(" + a + "," + b + ")";
+                    u = "(" + a + ", " + b + ")";
                cola.push( u );
-               cout << u << endl;
 
             }
             if( ejem.at(i) == '@' ){
@@ -56,9 +49,9 @@ int main(){
                cola.pop();
                u =  a + " -> " + b;
                cola.push( u );
-               cout << u << endl;
             }
         }
     }
+               cout << u << endl;
     return 0;
 }
