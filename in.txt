@@ -1,4 +1,4 @@
-f:@AB
+ f:@AB
 x:&CC
 x:&&BAC
 g:@&&ACB&XY
