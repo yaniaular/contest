@@ -11,47 +11,31 @@ int main(){
 
     string ejem = "@&&ACB&XY";
     string a,b;
-    string u;
-    char c;
-    int i;
-    stack<string> cola;
+    stack<string> pila;
 
-   
-   cout << ejem << endl;
-
-    for(i = ejem.size()-1; i > -1; i--){
-        if( isalpha( ejem.at(i) )  ){ //Si es letra, encolo
-            c = ejem.at(i);
-           stringstream ss;
-           string s;
-            ss << c;
-            ss >> s;
-            cola.push( s );
+    for(int i = ejem.size()-1; i > -1; i--){
+        if( isalpha( ejem.at(i) ) ){ 
+            char c = ejem.at(i);
+            stringstream ss; string s;
+            ss << c; ss >> s;
+            pila.push( s );
         }
         else{
             if( ejem.at(i) == '&' ){
-               a = cola.top();
-               cola.pop();
-               b = cola.top();
-               cola.pop();
-               
+               a = pila.top(); pila.pop();
+               b = pila.top(); pila.pop();
                if( a.at(0) == '(' ){
                    a = a.substr(1, a.size()-2 );
                }
-                    u = "(" + a + ", " + b + ")";
-               cola.push( u );
-
+               pila.push( "(" + a + ", " + b + ")" );
             }
             if( ejem.at(i) == '@' ){
-               a = cola.top();
-               cola.pop();
-               b = cola.top();
-               cola.pop();
-               u =  a + " -> " + b;
-               cola.push( u );
+               a = pila.top(); pila.pop();
+               b = pila.top(); pila.pop();
+               pila.push( a + " -> " + b );
             }
         }
     }
-               cout << u << endl;
+    cout << pila.top() << endl;
     return 0;
 }
