@@ -33,6 +33,9 @@ int main(){
                        if( a.at(0) == '(' ){
                            a = a.substr(1, a.size()-2 );
                        }
+                       if( b.at(0) == '(' ){
+                           b = b.substr(1, b.size()-2 );
+                       }
                        pila.push( "(" + a + ", " + b + ")" );
                     }
                     if( input_line.at(i) == '@' ){
