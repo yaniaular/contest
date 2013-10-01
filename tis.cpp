@@ -9,14 +9,13 @@ using namespace std;
 int main(){
     string input_line;
     string a,b;
-    int band = 1;
     stack<string> pila;
 
     while(band){
         getline(cin, input_line);
         
         if(input_line == "*"){
-            band = 0;
+            break;
         }
         else{
             cout << input_line.substr( 0, input_line.find(":") +1 ) << ' ';
