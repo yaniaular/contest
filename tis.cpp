@@ -11,7 +11,7 @@ int main(){
     string a,b;
     stack<string> pila;
 
-    while(band){
+    while(true){
         getline(cin, input_line);
         
         if(input_line == "*"){
